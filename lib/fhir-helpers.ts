@@ -31,7 +31,7 @@ export async function filterSlotsBySpecialty(
   accessToken?: string
 ): Promise<Slot[]> {
 
-  const baseUrl = 'http://18.219.87.205:8080/fhir';
+  const baseUrl = 'https://smartvisit-fhir.duckdns.org/fhir';
 
   const headers: Record<string, string> = {
     'Accept': 'application/fhir+json'

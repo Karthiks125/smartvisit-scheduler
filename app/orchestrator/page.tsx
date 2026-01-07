@@ -488,7 +488,7 @@ export default function OrchestratorPage() {
 
       let filteredSlots = slots;
       if (preferredPractitioner) {
-        filteredSlots = slots.filter(slot => slot.practitionerId === preferredPractitioner);
+        filteredSlots = slots.filter((slot: any) => slot.practitionerId === preferredPractitioner);
         console.log(`🎯 Filtered to preferred practitioner: ${filteredSlots.length} slots`);
       }
 

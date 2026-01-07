@@ -538,7 +538,7 @@ export default function OrchestratorPage() {
         const pracName = practitionersForSpecialty.find(p => p.id === pracId)?.name || 'Unknown';
         console.log(`\n  👨‍⚕️ Trying practitioner: ${pracName} (${pracId})`);
 
-        const pracSlots = filteredSlots.filter(s => s.practitionerId === pracId);
+        const pracSlots = filteredSlots.filter((s: any) => s.practitionerId);
         const pracSlotsByDate = new Map<string, Slot[]>();
 
         pracSlots.forEach(slot => {
@@ -616,7 +616,7 @@ export default function OrchestratorPage() {
           const pracName = practitionersForSpecialty.find(p => p.id === pracId)?.name || 'Unknown';
           console.log(`\n  👨‍⚕️ Trying practitioner: ${pracName} (${pracId})`);
 
-          const pracSlots = filteredSlots.filter(s => s.practitionerId === pracId);
+          const pracSlots = filteredSlots.filter((s: any) => s.practitionerId);
           const pracSlotsByDate = new Map<string, Slot[]>();
 
           pracSlots.forEach(slot => {

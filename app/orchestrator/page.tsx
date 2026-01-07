@@ -735,14 +735,14 @@ export default function OrchestratorPage() {
           slot: [{ reference: `Slot/${appt.slot.id}` }]
         };
 
-        await fetch('http://localhost:8080/fhir/Appointment', {
+        await fetch('http://18.219.87.205:8080/fhir/Appointment', {
           method: 'POST',
           headers: { 'Content-Type': 'application/fhir+json' },
           body: JSON.stringify(appointmentBody)
         });
 
         const updatedSlot = { ...appt.slot, status: 'busy' };
-        await fetch(`http://localhost:8080/fhir/Slot/${appt.slot.id}`, {
+        await fetch(`http://18.219.87.205:8080/fhir/Slot/${appt.slot.id}`, {
           method: 'PUT',
           headers: { 'Content-Type': 'application/fhir+json' },
           body: JSON.stringify(updatedSlot)

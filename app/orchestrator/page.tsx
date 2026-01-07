@@ -67,8 +67,8 @@ interface Slot {
       display?: string;
     }>;
   }>;
-  practitionerName?: string;
-  practitionerId?: string;
+  practitionerName?: string;  // Add this line
+  practitionerId?: string;     // Add this line
 }
 
 interface ScheduledAppointment {

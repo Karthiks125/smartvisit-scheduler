@@ -528,7 +528,7 @@ export default function OrchestratorPage() {
 
       const availablePractitioners = preferredPractitioner 
         ? [preferredPractitioner]
-        : [...new Set(filteredSlots.map(s => s.practitionerId).filter(Boolean))];
+      : [...new Set(filteredSlots.map((s: any) => s.practitionerId).filter(Boolean))];
 
       console.log(`\n👥 Will generate options for ${availablePractitioners.length} practitioner(s)`);
 

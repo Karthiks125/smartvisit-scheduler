@@ -19,9 +19,9 @@ interface Slot {
 
 // YOUR UNIQUE PRACTITIONER IDs - MUST MATCH page.tsx
 const PRACTITIONERS_BY_SPECIALTY: Record<string, string[]> = {
-  "Ophthalmology": ["oph-sarah-580509", "oph-michael-580509"],
-  "Cardiology": ["card-james-580509", "card-maria-580509"],
-  "Gynecology": ["gyn-emily-580509", "gyn-priya-580509"]
+  "Ophthalmology": ["oph-sarah-315581", "oph-michael-315581"],
+  "Cardiology": ["card-james-315581", "card-maria-315581"],
+  "Gynecology": ["gyn-emily-315581", "gyn-priya-315581"]
 };
 
 export async function filterSlotsBySpecialty(

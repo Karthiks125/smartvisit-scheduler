@@ -1,7 +1,7 @@
 // scripts/final-solution-unique-ids.js
 // Complete FHIR resource creation: Practitioners -> Schedules -> Slots
 
-const HAPI_BASE = 'http://18.219.87.205:8080/fhir';
+const HAPI_BASE = 'https://smartvisit-fhir.duckdns.org/fhir';
 
 const timestamp = Date.now().toString().slice(-6);
 

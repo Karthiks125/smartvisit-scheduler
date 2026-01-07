@@ -35,16 +35,16 @@ const DEMO_PATIENTS = [
 
 const PRACTITIONERS_BY_SPECIALTY: Record<string, Array<{id: string, name: string, limited?: boolean}>> = {
   Ophthalmology: [
-    { id: 'oph-sarah-580509', name: 'Dr. Sarah Johnson' },
-    { id: 'oph-michael-580509', name: 'Dr. Michael Chen' },
+    { id: 'oph-sarah-315581', name: 'Dr. Sarah Johnson' },
+    { id: 'oph-michael-315581', name: 'Dr. Michael Chen' },
   ],
   Cardiology: [
-    { id: 'card-james-580509', name: 'Dr. James Wilson' },
-    { id: 'card-maria-580509', name: 'Dr. Maria Garcia' },
+    { id: 'card-james-315581', name: 'Dr. James Wilson' },
+    { id: 'card-maria-315581', name: 'Dr. Maria Garcia' },
   ],
   Gynecology: [
-    { id: 'gyn-emily-580509', name: 'Dr. Emily Rodriguez' },
-    { id: 'gyn-priya-580509', name: 'Dr. Priya Patel' },
+    { id: 'gyn-emily-315581', name: 'Dr. Emily Rodriguez' },
+    { id: 'gyn-priya-315581', name: 'Dr. Priya Patel' },
   ],
 };
 

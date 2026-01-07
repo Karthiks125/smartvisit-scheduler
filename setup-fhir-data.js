@@ -1,4 +1,4 @@
-const FHIR_BASE = "https://hapi.fhir.org/baseR4";
+const FHIR_BASE = "https://smartvisit-fhir.duckdns.org/fhir";
 
 console.log("🏥 Starting FHIR Setup...\n");
 

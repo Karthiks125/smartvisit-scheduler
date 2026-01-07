@@ -487,8 +487,6 @@ export default function OrchestratorPage() {
         };
       });
 
-      console.log(`👨‍⚕️ Available practitioners in slots:`, [...new Set(slots.map(s => s.practitionerName))]);
-
       let filteredSlots = slots;
       if (preferredPractitioner) {
         filteredSlots = slots.filter(slot => slot.practitionerId === preferredPractitioner);

@@ -475,17 +475,16 @@ export default function OrchestratorPage() {
 
       const practitionersForSpecialty = PRACTITIONERS_BY_SPECIALTY[selectedSpecialty] || [];
 
-      slots = slots.map(slot => {
-        const scheduleRef = slot.schedule?.reference || '';
-        const scheduleId = scheduleRef.split('/')[1];
-        const practitioner = practitionersForSpecialty.find(p => p.id === scheduleId);
-
-        return {
-          ...slot,
-          practitionerId: scheduleId,
-          practitionerName: practitioner?.name || "Available Specialist"
-        };
-      });
+     slots = slots.map(slot => {
+  const scheduleRef = slot.schedule?.reference;
+  const scheduleId = scheduleRef.split('/')[1];
+  const practitioner = practitionersForSpecialty.find(p => p.id === scheduleId);
+  return {
+    ...slot,
+    practitionerId: scheduleId,
+    practitionerName: practitioner?.name || 'Available Specialist'
+  } as Slot;
+});
 
       let filteredSlots = slots;
       if (preferredPractitioner) {

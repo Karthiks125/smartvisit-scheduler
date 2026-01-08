@@ -741,7 +741,7 @@ export default function OrchestratorPage() {
         });
 
         const updatedSlot = { ...appt.slot, status: 'busy' };
-        await fetch(`https://smartvisit-fhir.duckdns.org/fhirSlot/${appt.slot.id}`, {
+        await fetch(`https://smartvisit-fhir.duckdns.org/fhir/Slot/${appt.slot.id}`, {
           method: 'PUT',
           headers: { 'Content-Type': 'application/fhir+json' },
           body: JSON.stringify(updatedSlot)

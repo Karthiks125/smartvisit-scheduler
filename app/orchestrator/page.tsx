@@ -727,7 +727,7 @@ export default function OrchestratorPage() {
               status: 'accepted'
             },
             {
-              actor: { reference: appt.slot.schedule?.reference.replace('Schedule/', 'Practitioner/') },
+              actor: { reference: `Practitioner/${appt.slot.practitionerId}` },
               status: 'accepted'
             }
           ],

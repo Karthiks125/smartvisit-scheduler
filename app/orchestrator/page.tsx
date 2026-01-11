@@ -996,6 +996,12 @@ if (!preferredPractitioner) {
 {selectedSpecialty && (
   <div className="bg-white rounded-xl shadow-lg p-6 mb-6 border border-gray-200">
     <h2 className="text-xl font-semibold mb-4 text-gray-900">Select Services ({selectedSpecialty})</h2>
+    {/* NEW CAPTION - INSERT HERE */}
+<div className="mb-4 p-3 bg-cyan-50 border-l-4 border-cyan-400 rounded-lg">
+  <p className="text-sm text-cyan-800">
+    <span className="font-semibold">🔬 Service Catalog:</span> Synthetic demo services. In production, service types are dynamically queried from FHIR <code className="bg-white px-1 rounded text-cyan-900 font-semibold">HealthcareService</code> resources mapped to your EMR's procedure codes.
+  </p>
+</div>
     <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
       {SERVICES_BY_SPECIALTY[selectedSpecialty as keyof typeof SERVICES_BY_SPECIALTY].map((service) => {
         const coverage = SERVICE_COVERAGE[service as keyof typeof SERVICE_COVERAGE];

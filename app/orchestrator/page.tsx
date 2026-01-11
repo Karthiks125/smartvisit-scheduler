@@ -457,10 +457,15 @@ export default function OrchestratorPage() {
   };
 
   const generateSchedules = async () => {
-    if (!selectedSpecialty || selectedServices.length === 0) {
-      setError('Please select a specialty and at least one service');
-      return;
-    }
+ if (!selectedSpecialty || selectedServices.length === 0) {
+  setError('Please select a specialty and at least one service');
+  return;
+}
+
+if (!preferredPractitioner) {
+  setError('Please select a practitioner');
+  return;
+}
 
     setLoading(true);
     setError('');
@@ -967,24 +972,24 @@ export default function OrchestratorPage() {
     <h2 className="text-xl font-semibold mb-2 text-gray-900">
       Practitioner Preference
     </h2>
-    <p className="text-sm text-gray-600 mb-4">
-      Choose "Any Available" for maximum flexibility, or select a specific practitioner for continuity of care
-    </p>
+  <p className="text-sm text-gray-600 mb-4">
+  Select your preferred practitioner for continuity of care across all appointments
+</p>
     <select
-      value={preferredPractitioner}
-      onChange={(e) => {
-        setPreferredPractitioner(e.target.value);
-        setScheduleOptions([]);
-      }}
-      className="w-full p-3 border border-gray-300 rounded-lg text-gray-900 focus:ring-2 focus:ring-emerald-500 focus:border-transparent"
-    >
-      <option value="">Any Available Practitioner (Recommended)</option>
-      {currentPractitioners.map(prac => (
-        <option key={prac.id} value={prac.id}>
-          {prac.name}
-        </option>
-      ))}
-    </select>
+  value={preferredPractitioner}
+  onChange={(e) => {
+    setPreferredPractitioner(e.target.value);
+    setScheduleOptions([]);
+  }}
+  className="w-full p-3 border border-gray-300 rounded-lg text-gray-900 focus:ring-2 focus:ring-emerald-500 focus:border-transparent"
+>
+  <option value="">Select a Practitioner</option>
+  {currentPractitioners.map(prac => (
+    <option key={prac.id} value={prac.id}>
+      {prac.name}
+    </option>
+  ))}
+</select>
   </div>
 )}
 

@@ -409,7 +409,7 @@ function buildSchedule(
 
 export default function OrchestratorPage() {
   const { data: session, status } = useSession()
-  const [showLogin, setShowLogin] = useState(false);
+  const [showLogin, setShowLogin] = useState(true);  // Show login first
 
 
   const [selectedSpecialty, setSelectedSpecialty] = useState<string>('');
